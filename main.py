@@ -6,7 +6,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",  # React app running on localhost
-    "http://127.0.0.1:3000",  # React app running on localhost
+    "http://127.0.0.1:3000",
+    "https://csv-dashboard-navy.vercel.app/",  # React app running on localhost
 ]
 
 app.add_middleware(
