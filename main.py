@@ -7,12 +7,12 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",  # React app running on localhost
     "http://127.0.0.1:3000",
-    "https://csv-dashboard-navy.vercel.app/",  # React app running on localhost
+    "https://csv-dashboard-navy.vercel.app",  # React app running on localhost
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://csv-dashboard-navy.vercel.app/"],
+    allow_origins=origins,  # Allows all origins
     allow_credentials=True,  # Allows all origins
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
